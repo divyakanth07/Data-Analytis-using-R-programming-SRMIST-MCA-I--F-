@@ -91,8 +91,8 @@ install.packages("ggplot2")
    
 3. Run each R script in RStudio or R console:
    ```R
-   source("decision_tree_titanic.R")
-   source("naive_bayes_titanic.R")
+   source("decisionTree.R")
+   source("naivebayes.R")
    source("K nearest integer using iris database.R")
    source("randomForest.R")
    ```
