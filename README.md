@@ -41,14 +41,25 @@ The datasets used in these projects are:
      - Train a KNN model using the `class` library.
      - Evaluate the model's performance using accuracy for various values of `k`.
    - **Algorithm**: K-Nearest Neighbors (using the `class` library in R).
+### 4. **Random Forest using Iris dataset**
+   - **Description**: The Random Forest algorithm is used to classify the species of iris flowers based on their measurements. Hyperparameter tuning is performed using cross-validation.
+   - **Dataset**: `iris.csv` (included in R by default)
+   - **Steps**:
+     - Split the data into training and testing sets.
+     - Train a Random Forest model using the `randomForest` library.
+     - Perform hyperparameter tuning for the `mtry` parameter using a grid search.
+     - Plot the results of the hyperparameter tuning.
+   - **Algorithm**: Random Forest (using the `randomForest` and `caret` libraries in R).
 
 ## Files in the Repository
 
 - **titanic.csv**: Titanic dataset used for the Decision Tree and Naive Bayes algorithms.
 - **iris.csv**: Iris dataset used for the KNN algorithm.
-- **decision_tree_titanic.R**: R script for implementing the Decision Tree algorithm on the Titanic dataset.
-- **naive_bayes_titanic.R**: R script for implementing the Naive Bayes algorithm on the Titanic dataset.
-- **knn_iris.R**: R script for implementing the KNN algorithm on the Iris dataset.
+- **decisionTree.R**: R script for implementing the Decision Tree algorithm on the Titanic dataset.
+- **naivebayes.R**: R script for implementing the Naive Bayes algorithm on the Titanic dataset.
+- **K nearest integer using iris database.R**: R script for implementing the KNN algorithm on the Iris dataset.
+- **randomForest.R**: R script for implementing the Random Forest algorithm on the Iris dataset with hyperparameter tuning.
+
 
 ## Installation and Setup
 
@@ -56,13 +67,13 @@ To run the R scripts in this repository, make sure you have R installed on your 
 
 ### Required Libraries:
 To install the required libraries for each algorithm, you can use the following commands in R:
-
 ```R
-# Install necessary libraries
-install.packages("rpart")      # For Decision Tree
-install.packages("e1071")      # For Naive Bayes
-install.packages("caTools")    # For splitting data
-install.packages("class")      # For KNN
+install.packages("rpart")      
+install.packages("e1071")      
+install.packages("caTools")   
+install.packages("class") 
+install.packages("randomForest") 
+install.packages("caret") 
 install.packages("ggplot2")    # For plotting (optional)
 ```
 
@@ -76,20 +87,21 @@ install.packages("ggplot2")    # For plotting (optional)
    ```bash
    cd Data-Analytis-using-R-programming-SRMIST-MCA-I--F-
    ```
-
+   
 3. Run each R script in RStudio or R console:
    ```R
-   source("decisionTree.R")
-   source("naiveBayes.R")
-   source("K nearest using iris dataset.R")
+   source("decision_tree_titanic.R")
+   source("naive_bayes_titanic.R")
+   source("K nearest integer using iris database.R")
+   source("randomForest.R")
    ```
 
 ## Project Summary
-
-This project demonstrates the application of three important machine learning algorithms using the R programming language:
+This project demonstrates the application of four important machine learning algorithms using the R programming language:
 - **Decision Tree** to predict Titanic survivors.
 - **Naive Bayes** to predict Titanic survivors.
 - **K-Nearest Neighbors (KNN)** to classify iris flower species.
+- **Random Forest** to classify iris flower species with hyperparameter tuning.
 
 Each algorithm provides a hands-on introduction to important machine learning concepts and their practical implementation in R.
 
