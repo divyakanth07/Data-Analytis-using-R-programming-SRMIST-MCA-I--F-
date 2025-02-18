@@ -34,7 +34,7 @@ The datasets used in these projects are:
 
 ### 3. **K-Nearest Neighbors (KNN) using Iris dataset**
    - **Description**: The K-Nearest Neighbors algorithm is used to classify the species of iris flowers based on their measurements.
-   - **Dataset**: `iris.csv` (included in R by default)
+   - **Dataset**: `iris_dataset.csv`
    - **Steps**:
      - Load and preprocess the data.
      - Split the data into training and testing sets.
