@@ -68,13 +68,14 @@ To run the R scripts in this repository, make sure you have R installed on your 
 ### Required Libraries:
 To install the required libraries for each algorithm, you can use the following commands in R:
 ```R
+install.packages("dplyr")
 install.packages("rpart")      
 install.packages("e1071")      
 install.packages("caTools")   
 install.packages("class") 
 install.packages("randomForest") 
 install.packages("caret") 
-install.packages("ggplot2")    # For plotting (optional)
+install.packages("ggplot2")
 ```
 
 ### Running the Scripts:
