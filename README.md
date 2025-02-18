@@ -81,7 +81,7 @@ install.packages("ggplot2")    # For plotting (optional)
    ```R
    source("decision_tree_titanic.R")
    source("naive_bayes_titanic.R")
-   source("knn_iris.R")
+   source("K nearest using iris dataset.R")
    ```
 
 ## Project Summary
