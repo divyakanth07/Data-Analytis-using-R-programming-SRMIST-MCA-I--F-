@@ -5,10 +5,12 @@ This repository contains implementations of various data analytics algorithms us
 - **Decision Tree** (using the Titanic dataset)
 - **Naive Bayes** (using the Titanic dataset)
 - **K-Nearest Neighbors (KNN)** (using the Iris dataset)
+- **K-Means Clustering** (using the USArrests dataset)
 
 The datasets used in these projects are:
 - **Titanic dataset**: A dataset that contains information about passengers aboard the Titanic ship, including whether they survived.
 - **Iris dataset**: A classic dataset used in machine learning for classification, containing measurements of different species of iris flowers.
+- **USArrests dataset**: A dataset containing crime statistics for US states, used for clustering analysis.
 
 ## Project Details
 
@@ -41,25 +43,27 @@ The datasets used in these projects are:
      - Train a KNN model using the `class` library.
      - Evaluate the model's performance using accuracy for various values of `k`.
    - **Algorithm**: K-Nearest Neighbors (using the `class` library in R).
-### 4. **Random Forest using Iris dataset**
-   - **Description**: The Random Forest algorithm is used to classify the species of iris flowers based on their measurements. Hyperparameter tuning is performed using cross-validation.
-   - **Dataset**: `iris.csv` (included in R by default)
+
+### 4. **K-Means Clustering using USArrests dataset**
+   - **Description**: K-Means clustering is performed to group US states based on their crime statistics.
+   - **Dataset**: `USArrests.csv`
    - **Steps**:
-     - Split the data into training and testing sets.
-     - Train a Random Forest model using the `randomForest` library.
-     - Perform hyperparameter tuning for the `mtry` parameter using a grid search.
-     - Plot the results of the hyperparameter tuning.
-   - **Algorithm**: Random Forest (using the `randomForest` and `caret` libraries in R).
+     - Load and scale the data (excluding the state names).
+     - Perform K-Means clustering for different numbers of clusters (2, 3, 4, and 5).
+     - Visualize the clustering results using `fviz_cluster`.
+     - Use the silhouette method to determine the optimal number of clusters.
+   - **Algorithm**: K-Means Clustering (using the `factoextra` and `ggplot2` libraries in R).
 
 ## Files in the Repository
 
 - **titanic.csv**: Titanic dataset used for the Decision Tree and Naive Bayes algorithms.
 - **iris.csv**: Iris dataset used for the KNN algorithm.
+- **USArrests.csv**: USArrests dataset used for the K-Means Clustering algorithm.
 - **decisionTree.R**: R script for implementing the Decision Tree algorithm on the Titanic dataset.
 - **naivebayes.R**: R script for implementing the Naive Bayes algorithm on the Titanic dataset.
 - **K nearest integer using iris database.R**: R script for implementing the KNN algorithm on the Iris dataset.
+- **K-Cluster.R**: R script for implementing the K-Means Clustering algorithm on the USArrests dataset.
 - **randomForest.R**: R script for implementing the Random Forest algorithm on the Iris dataset with hyperparameter tuning.
-
 
 ## Installation and Setup
 
@@ -76,6 +80,7 @@ install.packages("class")
 install.packages("randomForest") 
 install.packages("caret") 
 install.packages("ggplot2")
+install.packages("factoextra")
 ```
 
 ### Running the Scripts:
@@ -95,7 +100,9 @@ install.packages("ggplot2")
    source("naivebayes.R")
    source("K nearest integer using iris database.R")
    source("randomForest.R")
+   source("K Cluster.R")
    ```
+
 
 ## Project Summary
 This project demonstrates the application of four important machine learning algorithms using the R programming language:
@@ -103,9 +110,13 @@ This project demonstrates the application of four important machine learning alg
 - **Naive Bayes** to predict Titanic survivors.
 - **K-Nearest Neighbors (KNN)** to classify iris flower species.
 - **Random Forest** to classify iris flower species with hyperparameter tuning.
+- **K-Means Clustering** is performed to group US states based on their crime statistics.
 
 Each algorithm provides a hands-on introduction to important machine learning concepts and their practical implementation in R.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+
